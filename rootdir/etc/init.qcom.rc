@@ -46,7 +46,7 @@ on early-boot
 
 on post-fs
     # Support legacy paths
-    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
