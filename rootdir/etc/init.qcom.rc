@@ -344,7 +344,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-    disabled
+    group wakelock
 
 service rfs_access /system/bin/rfs_access
    class core
@@ -420,10 +420,11 @@ service qmiproxy /system/bin/qmiproxy
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps qcom_diag wakelock
 
 service netmgrd /system/bin/netmgrd
     class main
+    group wakelock
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
