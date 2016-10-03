@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
+    qcom.bluetooth.soc=ath3k \
     qcom.bt.dev_power_class=1 \
     ro.btconfig.if=smd \
     ro.btconfig.dev=/dev/smd3 \
