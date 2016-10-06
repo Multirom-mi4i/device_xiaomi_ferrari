@@ -9,12 +9,15 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.hfp.client=1 \
-    qcom.bluetooth.soc=ath3k \
+    qcom.bluetooth.soc=smd \
     qcom.bt.dev_power_class=1 \
-    ro.btconfig.if=smd \
-    ro.btconfig.dev=/dev/smd3 \
-    ro.btconfig.vendor=qcom \
-    ro.btconfig.chip=WCN3680B
-
-
+    ro.qualcomm.bt.hci_transport=smd \
+    ro.bluetooth.dun=false \
+    ro.bluetooth.sap=false \
+    ro.qualcomm.bluetooth.ftp=true \
+    ro.qualcomm.bluetooth.hfp=true \
+    ro.qualcomm.bluetooth.hsp=true \
+    ro.qualcomm.bluetooth.map=true \
+    ro.qualcomm.bluetooth.nap=true \
+    ro.qualcomm.bluetooth.opp=true \
+    ro.qualcomm.bluetooth.pbap=true
