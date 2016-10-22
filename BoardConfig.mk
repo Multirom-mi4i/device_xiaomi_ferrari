@@ -50,12 +50,18 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 # TWRP Build Flags
 TARGET_RECOVERY_FSTAB := device/xiaomi/ferrari/recovery/etc/twrp.fstab
 TW_THEME := portrait_hdpi
-#RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
 TW_INCLUDE_CRYPTO := false
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+BOARD_SUPPRESS_SECURE_ERASE := true
+TW_TARGET_USES_QCOM_BSP := true
+TW_NEW_ION_HEAP := true
 
 # Multirom flags
 TARGET_RECOVERY_IS_MULTIROM := true
+MR_NO_KEXEC := 2
+MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
 MR_INPUT_TYPE := type_a
 MR_INIT_DEVICES := device/xiaomi/ferrari/multirom/mr_init_devices.c
 DEVICE_RESOLUTION := 1080x1920

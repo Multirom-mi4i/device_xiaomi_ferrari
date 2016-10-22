@@ -1,5 +1,4 @@
-#
-# Copyright 2012 The Android Open Source Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,12 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, device/xiaomi/ferrari/full_ferrari.mk)
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/tipsy/config/common_full_phone.mk)
 
 LOCAL_PATH := device/xiaomi/ferrari
 
@@ -32,12 +30,9 @@ PRODUCT_COPY_FILES += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ferrari
-PRODUCT_NAME := omni_ferrari
-PRODUCT_BRAND := YU
-PRODUCT_MODEL := AO5510
-PRODUCT_MANUFACTURER := YU
+PRODUCT_NAME := tipsy_ferrari
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := MI 4i
+PRODUCT_MANUFACTURER := Xiaomi
 
-# enable stock zip packages flash
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.build.product=YUREKA \
-    ro.product.device=YUREKA
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
